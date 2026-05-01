@@ -4,7 +4,9 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { CloudSun, TrendingUp, Sprout, Shield, MessageSquareText, BarChart3, Menu, X, Check, MapPin, Mail, Phone, Star, ArrowRight } from 'lucide-react'
 
 // Import new video file
-import herovideo from '../hero/video1.mp4'
+// Video import removed as file is missing
+// import herovideo from '../hero/video1.mp4'
+
 
 import farmer1 from '../hero/farmer1.jpg'
 import farmer2 from '../hero/farmer2.jpg'
@@ -117,15 +119,11 @@ export default function Landing() {
 
         {/* HERO SECTION - Sticky Stack layout */}
         <motion.section ref={heroRef} style={{ scale: heroScale }} className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden z-0 bg-[#021f11] origin-top transform-gpu will-change-transform">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
+          <img
+            src={farmer5}
+            alt="Hero Background"
             className="absolute inset-0 w-full h-full object-cover opacity-80"
-          >
-            <source src={herovideo} type="video/mp4" />
-          </video>
+          />
 
           <div className="absolute inset-0 bg-gradient-to-t from-[#021f11]/90 via-[#021f11]/40 to-transparent" />
 
